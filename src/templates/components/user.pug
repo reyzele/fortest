@@ -1,0 +1,15 @@
+.user
+  .user__avatar
+    +image('content/user.jpg', 'about__avatar-pic')
+  .user__desc
+    -
+      const user = {
+        'Проживаю': 'Новосибирск',
+        'Возраст': '27',
+        'Родился': '1 января 1991'
+      }
+    table
+      each key, prop in user
+        tr
+          td.user__text.opacity_15 #{prop}:
+          td.user__text #{key}

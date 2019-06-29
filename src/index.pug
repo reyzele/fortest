@@ -1,7 +1,7 @@
-include ./mixins.pug
+include ./mixins
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -10,6 +10,12 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        .welcom-section
+          include ./templates/sections/hero
+          include ./templates/sections/about
+        include ./templates/sections/my-skills
+        include ./templates/sections/works
+        .reviews-section
+          include ./templates/sections/reviews
+          include ./templates/sections/contacts
+        include ./templates/components/footer

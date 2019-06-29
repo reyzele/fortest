@@ -1,0 +1,11 @@
+ul.socials
+  -
+    var socials = {
+      "insta": "https://www.facebook.com/isQVad",
+      "vk": "https://vk.com/id476946962",
+      "github": "https://github.com/reyzele"
+    }
+  each href, title in socials
+    li.socials__item
+      a(href=`${href}`).socials__link
+        +icon(`${title}`, 'socials__icon')

@@ -1,0 +1,14 @@
+nav.nav-main
+  ul.nav-main__list
+    -
+      const menu = {
+        "Главная": "/",
+        "Обо мне": "/about",
+        "Навыки": "/skills",
+        "Работы": "/works",
+        "Отзывы": "/reviews",
+        "Связаться": "/contacts"
+      }
+    each href, title in menu
+      li.nav-main__item
+        a.nav-main__link(href=`${href}`)= title

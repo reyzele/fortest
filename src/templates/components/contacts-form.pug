@@ -1,0 +1,26 @@
+.contacts-form__wrapper
+  form.contacts-form
+    .contacts-form__row
+      - 
+        var fields = [
+          ['user', 'Введите ваше имя', 'Ковальчук Дмитрий'],
+          ['envelope', 'Введите ваш email', 'loftschool@study.com'],
+        ]
+      each item in fields
+        label.contacts-form__col
+          .section-text.contacts-form__name= item[1]
+          .contacts-form__wrap
+            +icon(`${item[0]}`, 'contacts-form__icon') 
+            .contacts-form__field
+              input(type="text" placeholder=item[2]).contacts-form__input
+    .contacts-form__row
+      label.contacts-form__col
+        .section-text.contacts-form__name Сообщение к письму
+        .contacts-form__wrap
+          +icon('message', 'contacts-form__icon') 
+          .contacts-form__field
+            textarea(
+              placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса"
+            ).contacts-form__input
+    .contacts-form__row
+      input(type="submit" value="отправить").contacts-form__btn
