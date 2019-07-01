@@ -1,0 +1,8 @@
+mixin circle(percent)
+  - var value = 2;
+  svg(viewBox="0 0 100 100").circle
+    circle(cx="50" cy="50" r="40").circle.circle_under
+    circle(cx="50" stroke-dashoffset=`${percent}` cy="50" r="40" stroke="url(#gradient)" transform='rotate(180 50 50)').circle.circle_above
+    linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+      stop(offset="0%" stop-color="#f29400")
+      stop(offset="100%" stop-color="#ea7400")
