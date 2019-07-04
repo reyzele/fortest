@@ -6,10 +6,12 @@
       .works-slider__buttons
         a(href="#").works-slider__btn.works-slider__btn_next.active
         a(href="#").works-slider__btn.works-slider__btn_prev 
+      - var n = 1
       ul.works-slider__previews
-        li.works-slider__previews-item
-          a(href="#").works-slider__previews-link
-            +image('content/works/1.jpg', 'works-slider__previews-img')
+        while n < 4
+          li.works-slider__previews-item
+            a(href="#").works-slider__previews-link
+              +image(`content/works/${n++}.jpg`, 'works-slider__previews-img')
   .works-slider__desc
     ul.works-slider__tags
       - var tags = ['HTML', 'CSS', 'Javascript']

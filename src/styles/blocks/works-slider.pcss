@@ -57,16 +57,17 @@
 
 .works-slider__previews {
   position: absolute;
+  display: flex;
   right: 0;
   bottom: 60px;
-  height: 100px;
-  width: 178px;
 }
 
 .works-slider__previews-item {
+  position: relative;
   transition: 0.1s;
   &.active,
   &:hover {
+    z-index: 1;
     outline: 3px solid #f29400;
   }
 }
